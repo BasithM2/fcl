@@ -7,44 +7,57 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #e9ecef;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
         }
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
             padding: 20px;
+            max-width: 1200px;
+            width: 100%;
         }
         .card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 180px;
-            margin: 10px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
             text-align: center;
-            padding: 10px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
         }
         .card img {
             border-radius: 50%;
             width: 100px;
             height: 100px;
             object-fit: cover;
+            margin-top: 15px;
         }
         .player-name {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             margin: 10px 0 5px;
+            color: #007bff;
         }
         .player-role {
-            font-size: 14px;
-            color: #555;
+            font-size: 16px;
+            color: #6c757d;
+            margin-bottom: 10px;
         }
         .team-logo {
-            margin-top: 5px;
-            width: 30px;
-            height: 30px;
+            margin-top: 10px;
+            width: 40px;
+            height: 40px;
         }
     </style>
 </head>
@@ -52,14 +65,14 @@
     <div class="container">
         <div class="card">
             <img src="virat-kohli.jpg" alt="Virat Kohli">
-            <div class="player-name">Virat Kohli</div>
-            <div class="player-role">Batter</div>
-            <img class="team-logo" src="royal-challengers-logo.png" alt="Royal Challengers">
+            <div class="player-name">Riyan K</div>
+            <div class="player-role">stricker</div>
+            <img class="team-logo" src="Black_Gold_White_Modern_Football_Club_Badge_Logo-removebg-preview.png" alt="Royal Challengers">
         </div>
         <div class="card">
             <img src="ms-dhoni.jpg" alt="MS Dhoni">
-            <div class="player-name"></div>
-            <div class="player-role"></div>
+            <div class="player-name">MS Dhoni</div>
+            <div class="player-role">Wicketkeeper</div>
             <img class="team-logo" src="super-kings-logo.png" alt="Super Kings">
         </div>
         <!-- Add more player cards here -->
